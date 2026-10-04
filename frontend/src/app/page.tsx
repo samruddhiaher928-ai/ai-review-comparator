@@ -29,7 +29,8 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const API = "http://localhost:8000";
+  const API =
+  process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
   async function callSummarize() {
     setLoading(true);
